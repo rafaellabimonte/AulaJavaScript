@@ -1,9 +1,12 @@
 let num;
 
+function exercicio1() {
 function calculo (num)
 {
     let calculo = num^2;
+    let cubo = num * num * num;
     document.getElementById("mensagem").innerHTML = "O quadrado do número é: " + calculo;
+    document.getElementById("mensagem").innerHTML = "O cubo do número digitado é: " + cubo;
 }
 
 
@@ -21,4 +24,5 @@ function processar()
     numero2 = document.getElementById("numero2").value;
 
     somar(numero1, numero2);
+}
 }
