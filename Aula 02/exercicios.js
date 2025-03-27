@@ -1,28 +1,71 @@
-let num;
-
-function exercicio1() {
-function calculo (num)
+function exercicio1() 
 {
-    let calculo = num^2;
-    let cubo = num * num * num;
-    document.getElementById("mensagem").innerHTML = "O quadrado do número é: " + calculo;
-    document.getElementById("mensagem").innerHTML = "O cubo do número digitado é: " + cubo;
+    //variaveis
+    let numero, resultado1, resultado2;
+
+    //entrada de dados
+    numero = Number(document.getElementById("numero").value);
+
+    //processamento
+    resultado1 = numero ** 2;
+    resultado2 = numero ** 3;
+
+    //saida
+    document.getElementById("mensagem").innerHTML = "O quadrado do número é: " + resultado1 +
+                                                    "<br>O cubo do número digitado é: " + resultado2;
 }
 
-
-function solicitarEntradaDeDados ()
+function exercicio2() 
 {
-  numero1 = Number (prompt("Digite o número 1: "));
-  numero2 = Number (prompt("Digite o número 2: "));
+  let temperatura, resultado;
+  
+  temperatura = Number(document.getElementById("temperatura").value);
 
-  somar(numero1, numero2);
+  resultado = (temperatura - 32) * 5 / 9;
+
+  document.getElementById("mensagem").innerHTML = "A temperatura em graus Fahrenheit foi " + temperatura +
+                                                    "<br>A temperatura em graus Fahrenheit é " + resultado;
 }
 
-function processar() 
+function exercicio3() 
 {
-    numero1 = document.getElementById("numero1").value;
-    numero2 = document.getElementById("numero2").value;
+ let valor, taxa, tempo, parcela;
 
-    somar(numero1, numero2);
+ valor = Number(document.getElementById("valor").value);
+ taxa = Number(document.getElementById("taxa").value);
+ tempo = Number(document.getElementById("tempo").value);
+
+ parcela = valor + (valor * (taxa**2 / 100) * tempo);
+
+ document.getElementById("mensagem").innerHTML = "Valor = " + valor +
+                                                    "<br>Taxa = " + taxa +
+                                                    "<br>Tempo = " + tempo +
+                                                    "<br><br>O valor atualizado é: " + parcela;
+
 }
+
+function exercicio4() 
+{
+let base, altura, area;
+
+ base = Number(document.getElementById("base").value);
+ altura = Number(document.getElementById("altura").value);
+
+ area = base && altura / 2;
+
+ document.getElementById("mensagem").innerHTML = "Base = " + base +
+                                                    "<br>Altura = " + altura +
+                                                    "<br>A área do triângulo é: " + area;
+}                                                   
+
+function exercicio5() 
+{
+let valor, area;
+
+valor = Number(document.getElementById("valor").value);
+
+area = valor ** 2;
+
+document.getElementById("mensagem").innerHTML = "O lado do quadrado é: " + valor +
+                                                    "<br>A área do quadrado é:  = " + area;
 }
